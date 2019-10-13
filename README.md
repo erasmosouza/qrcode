@@ -25,6 +25,6 @@ Checar se a criação foi com sucesso:
 Agora, vamos rodar o docker:
 >docker run -p 3080:8080 dockerdemo
 
-Para saber se tudo deu certo, vamos chamar nossa api pela porta que exposta do docker (3080):
+Para saber se tudo deu certo, vamos chamar nossa api pela porta exposta do docker (3080):
 >$ curl http://localhost:3080/greeting?name=Docker  
 {"id":1,"message":"Hello, Docker"}
