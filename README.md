@@ -17,14 +17,14 @@ Test it:
 >./gradlew test
 
 Agora que temos o jar da aplicação, vamos criar o docker:
->docker build . -t dockerdemo
+>docker build . -t demo-api:1.0
 
 Checar se a criação foi com sucesso:
 >docker images
 
 Agora, vamos rodar o docker:
->docker run -p 3080:8080 dockerdemo
+>docker run -p 8080:8080 demo-api:1.0
 
-Para saber se tudo deu certo, vamos chamar nossa api pela porta exposta do docker (3080):
->$ curl http://localhost:3080/greeting?name=Docker  
+Para saber se tudo deu certo, vamos chamar nossa api pela porta exposta do docker (8080):
+>$ curl http://localhost:8080/check?name=Docker  
 {"id":1,"message":"Hello, Docker"}
