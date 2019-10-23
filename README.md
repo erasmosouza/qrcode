@@ -5,6 +5,7 @@ Segue uma simples implementação utilizando:
 - Swagger
 - Docker
 - gradle
+- xzing
 
 ## Clonar o projeto
 > git clone [URL_GIT]
@@ -25,6 +26,9 @@ Checar se a criação foi com sucesso:
 Agora, vamos rodar o docker:
 >docker run -p 8080:8080 qrcode-service:1.0
 
-Para saber se tudo deu certo, vamos chamar nossa api pela porta exposta do docker (8080):
->$ curl http://localhost:8080/check?name=QrCode  
-{"id":1,"message":"Hello, QrCode"}
+Para saber se tudo deu certo, basta abrir um browser e chamar a url com os parametros:
+>http://localhost:8080/qrcode/img?content=HelloQrCode&size=500
+
+Detalhamento dos paramentros:
+- **content**: É o texto que você que seja codificado no QrCode
+- **size**: Especificação do tamando da imagem do QrCode que será gerado 
